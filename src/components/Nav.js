@@ -2,10 +2,51 @@ import logo from '../images/logo.svg'
 
 function Nav() {
 
+    const navItems = [
+        {
+            item: 'Home',
+            link: 'https://www.google.com'
+        },
+        {
+            item: 'About',
+            link: 'https://www.google.com'
+        },
+        {
+            item: 'Menu',
+            link: 'https://www.google.com'
+        },
+        {
+            item: 'Reservations',
+            link: 'https://www.google.com'
+        },
+        {
+            item: 'Order Online',
+            link: 'https://www.google.com'
+        },
+        {
+            item: 'Login',
+            link: 'https://www.google.com'
+        },
+        
+    ]
+    
 
     return(
         <nav>
-            <img src={logo} />
+            
+            <img src={logo} alt="logo for Little Lemon" id="main-logo"/>
+            
+            {
+                navItems.map((navItem) => {
+                    return (
+                    <ul>
+                        <li><a href={navItem.link}>{navItem.item}</a></li>
+                    </ul>
+                    )
+                })
+            }
+            
+            
         </nav>
     )
 }

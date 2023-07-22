@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+
+ul {
+  list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:link {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#cta-text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#cta-title {
+  color: #F4CE14;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media (min-width: 800px) {
+  
+  #main-logo {
+    padding-left: 3%;
+    padding-right: 15%;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
   }
+
+  #call-to-action {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr;
+    padding-top: 2rem;
+    max-height: 17rem;
+    background-color: rgb(73, 94, 87);
+  }
+
+  #cta-img {
+    width: auto;
+    height: 30%;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  #specials-title-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .specials-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%;
+    column-gap: 20px;
+  }
+
+  .special-card {
+    background-color: rgb(237,239,238);
+    border-radius: 16px 16px 0px 0px;
+  }
+  
+  .special-foodPic {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 16px 0px 0px;
+  }
+
 }
+
+@media (max-width: 800px) {
+  
+#cta-img {
+  width: 40%;
+  height: auto;
+  border-radius: 16px;
+}
+
+#call-to-action {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(73, 94, 87);
+}
+
+}
+
+
+
