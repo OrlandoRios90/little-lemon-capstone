@@ -1,5 +1,6 @@
 import CallToAction from "./CallToAction";
 import Specials from "./Specials";
+import CustomersSay from "./CustomersSay";
 
 function Main() {
 
@@ -8,6 +9,7 @@ function Main() {
         <main>
             <CallToAction />
             <Specials />
+            <CustomersSay />
         </main>
     )
 }

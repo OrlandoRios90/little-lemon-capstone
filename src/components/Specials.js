@@ -41,6 +41,7 @@ function Specials() {
                         <h5>{special.item}</h5>
                         <p id="item-price">{special.price}</p>
                         <p id="item-description">{special.description}</p>
+                        <p id="order-delivery-card">Order Delivery</p>
                     </div>
                     )
                 })

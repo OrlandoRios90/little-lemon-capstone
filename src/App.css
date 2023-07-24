@@ -71,6 +71,37 @@ a:link {
     border-radius: 16px 16px 0px 0px;
   }
 
+  #order-delivery-card {
+    align-self: end;
+  }
+
+  #customers-say-container {
+    background-color: rgb(255, 235, 217);
+  }
+
+  #customers-say-title {
+    text-align: center;
+    padding-top: 5%;
+  }
+
+  .customer-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%;
+    column-gap: 20px;
+  }
+
+  .customer-card {
+    background-color: white;
+    border-radius: 16px;
+  }
+
+  #star-icon {
+    height: 10%;
+    width: 10%;
+  }
+
 }
 
 @media (max-width: 800px) {
