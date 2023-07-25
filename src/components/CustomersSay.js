@@ -2,7 +2,7 @@ import person1 from '../images/addison richardson.jpg'
 import person2 from '../images/gary hughes.jpg'
 import person3 from '../images/linda bryant.jpg'
 import person4 from '../images/priscilla jackson.jpg'
-import starIcon from '../images/star icon.png'
+import star from '../images/star.png'
 
 function CustomersSay() {
 
@@ -37,28 +37,28 @@ function CustomersSay() {
 
         switch (rating) {
             case 1: 
-                return <img src={starIcon} id='star-icon'/>
+                return <img src={star} id='star-icon'/>
             case 2:
-                return <><img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
+                return <><img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
                        </>
             case 3:
-                return <><img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
+                return <><img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
                        </>
             case 4:
-                return <><img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
+                return <><img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
                        </>
             case 5:
-                return <><img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
-                         <img src={starIcon} id='star-icon'/>
+                return <><img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
+                         <img src={star} id='star-icon'/>
                        </>
         }
     }

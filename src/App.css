@@ -1,6 +1,7 @@
 
 ul {
   list-style-type: none;
+  
 }
 
 a:link {
@@ -16,12 +17,17 @@ a:link {
   color: #F4CE14;
 }
 
+#customer-avatar {
+  border-radius: 50%;
+}
+
+
 
 @media (min-width: 800px) {
   
   #main-logo {
-    padding-left: 3%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 8%;
   }
 
   nav {
@@ -33,6 +39,8 @@ a:link {
     display: grid;
     grid-template-columns: 0.5fr 1fr 2fr;
     padding-top: 2rem;
+    padding-left: 8%;
+    padding-right: 8%;
     max-height: 17rem;
     background-color: rgb(73, 94, 87);
   }
@@ -89,19 +97,72 @@ a:link {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 10%;
     column-gap: 20px;
   }
 
   .customer-card {
     background-color: white;
     border-radius: 16px;
+    text-align: center;
+    padding: 5px;
   }
 
   #star-icon {
     height: 10%;
     width: 10%;
+    padding-bottom: 10px;
+    padding-top: 5px;
   }
 
+  #about-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    column-gap: 25px;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+  }
+
+  #about-pics {
+    position: relative;
+  }
+
+  #pictureA, #pictureB {
+    width: 80%;
+    height: auto;
+  }
+
+  #pictureA {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  #pictureB {
+    position: absolute;
+    top: 160px;
+    left: 60px;
+  }
+
+  #footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%;
+    column-gap: 10px;
+    background-color: rgb(237, 235, 235);
+  }
+
+  .footer-ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  #footer-logo-container {
+    align-self: center;
+  }
 }
 
 @media (max-width: 800px) {

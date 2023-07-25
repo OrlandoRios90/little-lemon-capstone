@@ -5,11 +5,11 @@ function Nav() {
     const navItems = [
         {
             item: 'Home',
-            link: 'https://www.google.com'
+            link: '/'
         },
         {
             item: 'About',
-            link: 'https://www.google.com'
+            link: '/about'
         },
         {
             item: 'Menu',
