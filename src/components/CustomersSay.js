@@ -2,7 +2,7 @@ import person1 from '../images/addison richardson.jpg'
 import person2 from '../images/gary hughes.jpg'
 import person3 from '../images/linda bryant.jpg'
 import person4 from '../images/priscilla jackson.jpg'
-import star from '../images/star.png'
+
 
 function CustomersSay() {
 
@@ -37,28 +37,19 @@ function CustomersSay() {
 
         switch (rating) {
             case 1: 
-                return <img src={star} id='star-icon'/>
+                return <>⭐
+                      </>
             case 2:
-                return <><img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
+                return <>⭐⭐
                        </>
             case 3:
-                return <><img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
+                return <>⭐⭐⭐
                        </>
             case 4:
-                return <><img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
+                return <>⭐⭐⭐⭐
                        </>
             case 5:
-                return <><img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
-                         <img src={star} id='star-icon'/>
+                return <>⭐⭐⭐⭐⭐
                        </>
         }
     }

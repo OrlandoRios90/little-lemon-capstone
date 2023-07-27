@@ -163,6 +163,15 @@ a:link {
   #footer-logo-container {
     align-self: center;
   }
+
+  .booking-form-container {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
 }
 
 @media (max-width: 800px) {

@@ -17,7 +17,7 @@ function Nav() {
         },
         {
             item: 'Reservations',
-            link: 'https://www.google.com'
+            link: '/reservations'
         },
         {
             item: 'Order Online',
