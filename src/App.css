@@ -9,6 +9,20 @@ a:link {
   color: black;
 }
 
+button {
+  border-radius: 15px;
+  background-color: #F4CE14;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(73, 94, 87);
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
 #cta-text {
   color: white;
 }
@@ -165,11 +179,18 @@ a:link {
   }
 
   .booking-form-container {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 5%;
     padding-bottom: 5%;
+    column-gap: 5%;
+  }
+
+  #restaurant-img {
+    width: 120%;
+    height: auto;
   }
 
 }

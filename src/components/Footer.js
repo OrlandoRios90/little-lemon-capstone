@@ -16,7 +16,7 @@ function Footer() {
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="google.com">Menu</a></li>
-                        <li><a href="google.com">Reservations</a></li>
+                        <li><a href="/reservations">Reservations</a></li>
                         <li><a href="google.com">Order Online</a></li>
                         <li><a href="google.com">Login</a></li>
                     </ul>
