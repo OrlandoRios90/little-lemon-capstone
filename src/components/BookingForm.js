@@ -2,35 +2,33 @@ import { useState } from "react";
 import restaurant from '../images/restaurant.jpg'
 
 
-function BookingForm({availableTimes, setAvailableTimes}) {
+function BookingForm({availableTimes, updateTimes}) {
 
     const [name, setName] = useState("");
     const [date,setDate] = useState("");
-    const [time,setTime] = useState("");
+    const [time,setTime] = useState("17:00");
     const [numGuests, setNumGuests] = useState("2");
     const [occasion, setOccasion] = useState("");
-    const [finalTimes, setFinalTimes] = useState(
-        availableTimes.map((aTime) => {
-            return <option>{aTime}</option> 
-        }))
+    const [finalTimes, setFinalTimes] = useState("");
 
     function handleDateChange(e) {
+        
         setDate(e.target.value);
-
+    
         let stringDate = e.target.value;
-        let chosenDate = new Date(stringDate);
+        let chosenDate = new Date(stringDate+"T00:00:00");
 
-        setAvailableTimes(chosenDate);
-
+        updateTimes(chosenDate);
+        
         setFinalTimes(availableTimes.map((aTime) => {
             return <option>{aTime}</option> 
         }));
+
     }
 
     function handleTimeChange(e) {
         console.log(e.target.value);
         setTime(e.target.value);
-
     }
 
 
@@ -38,10 +36,10 @@ function BookingForm({availableTimes, setAvailableTimes}) {
         e.preventDefault();
         
         alert(`${name}, your table is reserved for ${date} at ${time}.`);
-        console.log(name,date,time,numGuests,occasion);
+        
         setName("");
-        setDate("2023-01-01");
-        setTime("16:00");
+        setDate("");
+        setTime("");
         setNumGuests("2");
         setOccasion(""); 
     }
@@ -68,7 +66,7 @@ function BookingForm({availableTimes, setAvailableTimes}) {
                     </div>
                     <div id="reservation-date">
                         <label>*Date of reservation: </label>
-                            <input type="date" id="date" value={date} min="2023-07-23" max="2023-12-31" 
+                            <input type="date" id="date" value={date} 
                             onChange={handleDateChange} required />
                     </div>
                     <div id="reservation-time">

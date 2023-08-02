@@ -12,6 +12,8 @@ const seededRandom = function (seed) {
     let dt = new Date(date);
     let seed = dt.getDate();
   
+    console.log("fetchAPI is triggered, result: " + result);
+
     let random = seededRandom(seed);
     for (let i = 17; i <= 23; i++) {
       if (random() < 0.5) {
@@ -21,6 +23,7 @@ const seededRandom = function (seed) {
         result.push(i + ":30");
       }
     }
+    console.log("random num gen triggered, result is: " + result);
     return result;
   }
   
