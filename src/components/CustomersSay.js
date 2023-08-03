@@ -3,7 +3,6 @@ import person2 from '../images/gary hughes.jpg'
 import person3 from '../images/linda bryant.jpg'
 import person4 from '../images/priscilla jackson.jpg'
 
-
 function CustomersSay() {
 
     const customers = [
@@ -51,10 +50,11 @@ function CustomersSay() {
             case 5:
                 return <>⭐⭐⭐⭐⭐
                        </>
+            default:
+                return <></>
         }
     }
     
-
     return (
         <div id="customers-say-container">
             <h2 id="customers-say-title">What our customers say!</h2>
@@ -64,13 +64,14 @@ function CustomersSay() {
                 customers.map((customer) => {
                     return (
                    <div className='customer-card'>
-                        <div id="rating">{
+                        <div id="rating">
+                            {
                             starRating(customer.rating)
-                        }</div>
-                        <img src={customer.avatar} id='customer-avatar'/>
+                            }
+                        </div>
+                        <img src={customer.avatar} id='customer-avatar' alt={customer.name}/>
                         <h5>{customer.name}</h5>
                         <p id="customer-comment">{customer.comment}</p>
-                        
                     </div>
                     )
                 })

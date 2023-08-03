@@ -27,7 +27,6 @@ function Specials() {
 
     return (
         <>
-
         <div id="specials-title-container">
             <h2>This Week's Specials</h2>
             <h3 style={{justifySelf: "end"}}>Button test</h3>
@@ -47,7 +46,6 @@ function Specials() {
                 })
             }
         </div>
-        
         </>
     )
 }

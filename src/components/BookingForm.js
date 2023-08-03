@@ -2,7 +2,7 @@ import { useState } from "react";
 import restaurant from '../images/restaurant.jpg'
 
 
-function BookingForm({availableTimes, updateTimes}) {
+function BookingForm({availableTimes, updateTimes, submitForm}) {
 
     const [name, setName] = useState("");
     const [date,setDate] = useState("");
@@ -27,27 +27,17 @@ function BookingForm({availableTimes, updateTimes}) {
     }
 
     function handleTimeChange(e) {
-        console.log(e.target.value);
         setTime(e.target.value);
     }
 
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        alert(`${name}, your table is reserved for ${date} at ${time}.`);
-        
-        setName("");
-        setDate("");
-        setTime("");
-        setNumGuests("2");
-        setOccasion(""); 
+    function handleSubmit() {
+        submitForm(true);
     }
 
     const isFormValid = () => {
         return (
             name && 
-            date !== "2023-01-01"
+            date 
         )
     }
 
@@ -60,30 +50,30 @@ function BookingForm({availableTimes, updateTimes}) {
                         <h3>Reserve a table</h3>
                     </div>
                     <div id="reservation-name">
-                        <label>*Name: </label>
+                        <label htmlFor="name">*Name: </label>
                             <input type="text" id="name" value={name} placeholder="John Doe"
-                            onChange={(e) => {setName(e.target.value)}} required />
+                            onChange={(e) => {setName(e.target.value)}} required alt="name-field"/>
                     </div>
                     <div id="reservation-date">
-                        <label>*Date of reservation: </label>
+                        <label htmlFor="date">*Date of reservation: </label>
                             <input type="date" id="date" value={date} 
-                            onChange={handleDateChange} required />
+                            onChange={handleDateChange} required alt="date-field"/>
                     </div>
                     <div id="reservation-time">
-                        <label>*Time of reservation: </label>
+                        <label htmlFor="time">*Time of reservation: </label>
                             <select id="time" value={time} onChange={handleTimeChange}>
                                {finalTimes}
                             </select>
                     </div>
                     <div id="num-guests">
-                        <label>*Number of guests: </label>
-                            <input type="number" id="numGuests" value={numGuests} min="2" max="12" 
+                        <label htmlFor="number of guests">*Number of guests: </label>
+                            <input type="number" id="numGuests" value={numGuests} min="2" max="10" 
                             onChange={(e) => {setNumGuests(e.target.value)}} required />
                     </div>
                     <div id="occasion">
-                        <label>Occasion: </label>
+                        <label htmlFor="occasion">Occasion: </label>
                             <input type="text" id="occasion" value={occasion} placeholder="Birthday"
-                            onChange={(e) => {setOccasion(e.target.value)}} />
+                            onChange={(e) => {setOccasion(e.target.value)}} maxLength={25}/>
                     </div>
                     <div id="reservation-disclaimer">
                         <h4>Fields marked with an asterisk are required.<br/>Reservation may be cancelled if 

@@ -4,49 +4,50 @@ function Nav() {
 
     const navItems = [
         {
+            id: 1,
             item: 'Home',
             link: '/'
         },
         {
+            id: 2,
             item: 'About',
             link: '/about'
         },
         {
+            id: 3,
             item: 'Menu',
-            link: 'https://www.google.com'
+            link: '/'
         },
         {
+            id: 4,
             item: 'Reservations',
             link: '/reservations'
         },
         {
+            id: 5,
             item: 'Order Online',
-            link: 'https://www.google.com'
+            link: '/'
         },
         {
+            id: 6,
             item: 'Login',
-            link: 'https://www.google.com'
+            link: '/'
         },
         
     ]
     
-
     return(
         <nav>
-            
             <img src={logo} alt="logo for Little Lemon" id="main-logo"/>
-            
             {
                 navItems.map((navItem) => {
                     return (
                     <ul>
-                        <li><a href={navItem.link}>{navItem.item}</a></li>
+                        <li key={navItem.id}><a href={navItem.link}>{navItem.item}</a></li>
                     </ul>
                     )
                 })
             }
-            
-            
         </nav>
     )
 }

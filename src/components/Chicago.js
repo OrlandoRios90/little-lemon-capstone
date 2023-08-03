@@ -14,8 +14,8 @@ function Chicago() {
                 </p>
             </div>
             <div id="about-pics">
-                <img src={pictureA} id="pictureA" />
-                <img src={pictureB} id="pictureB" />
+                <img src={pictureA} id="pictureA" alt="owners Mario and Adrian talking to eachother"/>
+                <img src={pictureB} id="pictureB" alt="owners Mario and Adrian cooking"/>
             </div>
         </div>
     )
