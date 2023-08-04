@@ -3,6 +3,13 @@ import BookingForm from './components/BookingForm';
 import BookingPage from './components/BookingPage';
 
 
+test('renders the booking form heading', () => {
+  render(<BookingPage />);
+  const headingElement = screen.getByText("Reserve a table");
+  expect(headingElement).toBeInTheDocument();
+});
+
+
 describe('initializeTimes', () => {
   it('calls fetchAPI and dispatches an action with the returned times', async () => {
 

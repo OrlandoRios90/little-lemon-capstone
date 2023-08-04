@@ -26,13 +26,20 @@ a:hover {
 #a-button {
   color: black;
   text-decoration: none;
+  padding: 10px;
 }
+
+#a-button:hover {
+  color: white;
+}
+
 
 button {
   border-radius: 12px;
   font-size: 15px;
   font-family: 'Karla', sans-serif;
   background-color: #F4CE14;
+  padding: 5px;
 }
 
 button:disabled {
@@ -40,13 +47,14 @@ button:disabled {
 }
 
 button:hover:disabled {
+  color:rgb(96, 92, 92);
   background-color: gray;
 }
 
 button:hover {
+  color: white;
   background-color: rgb(73, 94, 87);
 }
-
 
 button:active {
   transform: translateY(3px);
@@ -278,7 +286,7 @@ button:active {
 
 @media (max-width: 800px) {
   
-#cta-img {
+#cta-img , .special-foodPic, #pictureA, #pictureB, #restaurant-img{
   width: 40%;
   height: auto;
   border-radius: 16px;
@@ -291,6 +299,8 @@ button:active {
   justify-content: center;
   background-color: rgb(73, 94, 87);
 }
+
+
 
 }
 
