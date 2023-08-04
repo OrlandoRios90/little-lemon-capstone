@@ -1,3 +1,14 @@
+h1, h2, h3, h4 {
+  font-family: 'Markazi Text', serif;
+}
+
+h1 {
+  font-size: 28pt;
+}
+
+p, a, body {
+  font-family: 'Karla', sans-serif;
+}
 
 ul {
   list-style-type: none;
@@ -8,15 +19,20 @@ a:link {
   color: black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 #a-button {
-  color: white;
+  color: black;
+  text-decoration: none;
 }
 
 button {
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 15px;
+  font-family: 'Karla', sans-serif;
   background-color: #F4CE14;
-  color: white;
 }
 
 button:disabled {
@@ -54,7 +70,7 @@ button:active {
   
   #main-logo {
     padding-left: 20%;
-    padding-right: 8%;
+    padding-right: 7%;
   }
 
   nav {
@@ -86,6 +102,12 @@ button:active {
       border-radius: 16px;
       position: relative;
     }
+
+    #main-logo {
+      padding-left: 20%;
+      padding-right: 2%;
+    }
+
   }
 
   #specials-title-container {
@@ -113,10 +135,6 @@ button:active {
     width: 100%;
     height: auto;
     border-radius: 16px 16px 0px 0px;
-  }
-
-  #order-delivery-card {
-    align-self: end;
   }
 
   #customers-say-container {
@@ -208,6 +226,16 @@ button:active {
     padding-top: 5%;
     padding-bottom: 5%;
     column-gap: 5%;
+    background-color: rgb(73, 94, 87);
+  }
+
+  #res-title {
+    color: #F4CE14;
+  }
+
+  #reservation-name, #reservation-date, #reservation-time, #num-guests,
+  #occasion, #reservation-disclaimer {
+    color: white;
   }
 
   #restaurant-img {
@@ -222,6 +250,30 @@ button:active {
     padding-bottom: 4rem;
     background-color: rgb(73, 94, 87);
   }
+
+  #item-price-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-left: 3%;
+  }
+
+  #item-price {
+    justify-self: center;
+    color: #EE9972;
+  }
+
+  #item-description, #order-delivery-card {
+    padding-left: 3%;
+  }
+
+  #order-delivery-card  {
+    font-weight: bold;
+  }
+
+  #rating {
+    padding-bottom: 4%;
+  }
+
 }
 
 @media (max-width: 800px) {

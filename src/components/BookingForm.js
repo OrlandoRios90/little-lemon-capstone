@@ -1,43 +1,37 @@
-import { useState } from "react";
+
 import restaurant from '../images/restaurant.jpg'
 
 
-function BookingForm({availableTimes, updateTimes, submitForm}) {
+function BookingForm(props) {
 
-    const [name, setName] = useState("");
-    const [date,setDate] = useState("");
-    const [time,setTime] = useState("17:00");
-    const [numGuests, setNumGuests] = useState("2");
-    const [occasion, setOccasion] = useState("");
-    const [finalTimes, setFinalTimes] = useState("");
 
     function handleDateChange(e) {
         
-        setDate(e.target.value);
+        props.setDate(e.target.value);
     
         let stringDate = e.target.value;
         let chosenDate = new Date(stringDate+"T00:00:00");
 
-        updateTimes(chosenDate);
+        props.updateTimes(chosenDate);
         
-        setFinalTimes(availableTimes.map((aTime) => {
+        props.setFinalTimes(props.availableTimes.map((aTime) => {
             return <option>{aTime}</option> 
         }));
 
     }
 
     function handleTimeChange(e) {
-        setTime(e.target.value);
+        props.setTime(e.target.value);
     }
 
     function handleSubmit() {
-        submitForm(true);
+        props.submitForm(true);
     }
 
     const isFormValid = () => {
         return (
-            name && 
-            date 
+            props.name && 
+            props.date 
         )
     }
 
@@ -47,38 +41,38 @@ function BookingForm({availableTimes, updateTimes, submitForm}) {
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <div id="reservation-title">
-                        <h3>Reserve a table</h3>
+                        <h2 id="res-title">Reserve a table</h2>
                     </div>
                     <div id="reservation-name">
                         <label htmlFor="name">*Name: </label>
-                            <input type="text" id="name" value={name} placeholder="John Doe"
-                            onChange={(e) => {setName(e.target.value)}} required alt="name-field"/>
+                            <input type="text" id="name" value={props.name} placeholder="John Doe"
+                            onChange={(e) => {props.setName(e.target.value)}} required alt="name-field"/>
                     </div>
                     <div id="reservation-date">
                         <label htmlFor="date">*Date of reservation: </label>
-                            <input type="date" id="date" value={date} 
+                            <input type="date" id="date" value={props.date} 
                             onChange={handleDateChange} required alt="date-field"/>
                     </div>
                     <div id="reservation-time">
                         <label htmlFor="time">*Time of reservation: </label>
-                            <select id="time" value={time} onChange={handleTimeChange}>
-                               {finalTimes}
+                            <select id="time" value={props.time} onChange={handleTimeChange}>
+                               {props.finalTimes}
                             </select>
                     </div>
                     <div id="num-guests">
                         <label htmlFor="number of guests">*Number of guests: </label>
-                            <input type="number" id="numGuests" value={numGuests} min="2" max="10" 
-                            onChange={(e) => {setNumGuests(e.target.value)}} required />
+                            <input type="number" id="numGuests" value={props.numGuests} min="2" max="10" 
+                            onChange={(e) => {props.setNumGuests(e.target.value)}} required />
                     </div>
                     <div id="occasion">
                         <label htmlFor="occasion">Occasion: </label>
-                            <input type="text" id="occasion" value={occasion} placeholder="Birthday"
-                            onChange={(e) => {setOccasion(e.target.value)}} maxLength={25}/>
+                            <input type="text" id="occasion" value={props.occasion} placeholder="Birthday"
+                            onChange={(e) => {props.setOccasion(e.target.value)}} maxLength={25}/>
                     </div>
                     <div id="reservation-disclaimer">
-                        <h4>Fields marked with an asterisk are required.<br/>Reservation may be cancelled if 
+                        <p>Fields marked with an asterisk are required.<br/>Reservation may be cancelled if 
                             guests do not arrive 15 minutes after selected date and time.
-                        </h4>
+                        </p>
                     </div>
                     <button type="submit" disabled={!isFormValid()}>Create reservation</button>
                 </fieldset>

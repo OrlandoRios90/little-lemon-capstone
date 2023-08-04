@@ -29,7 +29,6 @@ function Specials() {
         <>
         <div id="specials-title-container">
             <h2>This Week's Specials</h2>
-            <h3 style={{justifySelf: "end"}}>Button test</h3>
         </div>
         <div className="specials-cards-container"> 
             {
@@ -37,8 +36,10 @@ function Specials() {
                     return (
                    <div className='special-card'>
                         <img src={special.foodPic} alt={special.item} className='special-foodPic'/>
-                        <h5>{special.item}</h5>
-                        <p id="item-price">{special.price}</p>
+                        <div id="item-price-container">
+                            <h3>{special.item}</h3>
+                            <h3 id="item-price">{special.price}</h3>
+                        </div>
                         <p id="item-description">{special.description}</p>
                         <p id="order-delivery-card">Order Delivery</p>
                     </div>

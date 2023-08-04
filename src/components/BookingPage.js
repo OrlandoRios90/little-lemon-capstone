@@ -1,9 +1,16 @@
 import BookingForm from "./BookingForm";
-import { useReducer } from "react";
+import { useState, useReducer } from "react";
 import  {fetchAPI, submitAPI} from './BookingAPI';
 import { useNavigate } from "react-router-dom";
 
 function BookingPage() {
+
+    const [name, setName] = useState("");
+    const [date,setDate] = useState("");
+    const [time,setTime] = useState("17:00");
+    const [numGuests, setNumGuests] = useState("2");
+    const [occasion, setOccasion] = useState("");
+    const [finalTimes, setFinalTimes] = useState("");
 
     const navigate = useNavigate();
 
@@ -25,7 +32,10 @@ function BookingPage() {
 
     return (
         <>
-        <BookingForm availableTimes={availableTimes} updateTimes={dispatch} submitForm={submitForm}/>
+        <BookingForm availableTimes={availableTimes} updateTimes={dispatch} submitForm={submitForm}
+                     name={name} setName={setName} date={date} setDate={setDate} time={time} setTime={setTime}
+                     numGuests={numGuests} setNumGuests={setNumGuests} occasion={occasion} setOccasion={setOccasion}
+                     finalTimes={finalTimes} setFinalTimes={setFinalTimes} />
         </>
     )
 }

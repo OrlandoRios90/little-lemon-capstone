@@ -9,25 +9,25 @@ function CustomersSay() {
         {
             name: 'Addison R.',
             avatar: person1,
-            comment: 'The food was really great, would come back again.',
+            comment: '"The food was really great, would come back again."',
             rating: 5
         },
         {
             name: 'Gary H.',
             avatar: person2,
-            comment: 'Had the greek salad and it was perfect.',
+            comment: '"Had the greek salad and it was perfect."',
             rating: 5
         },
         {
             name: 'Linda B.',
             avatar: person3,
-            comment: 'Buschetta was a little salty but overall great experience',
-            rating: 4
+            comment: '"Buschetta was a little salty but overall great experience"',
+            rating: 3
         },
         {
             name: 'Priscilla J.',
             avatar: person4,
-            comment: 'I come here all the time for lunch',
+            comment: '"I come here all the time for lunch"',
             rating: 5
         }
     ]

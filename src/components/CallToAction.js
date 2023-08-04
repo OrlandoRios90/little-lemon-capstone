@@ -6,7 +6,7 @@ function CallToAction() {
         <div id="call-to-action">
             <div id="cta-text">
                 <h1 ID="cta-title">Little Lemon</h1>
-                <h3>Chicago</h3>
+                <h2>Chicago</h2>
                 <p>Little Lemon is a locally owned, Chicago-based restaurant serving fresh Mediterranean food.</p>
                 <button><a href="/reservations" id="a-button">Make a reservation</a></button>
             </div>

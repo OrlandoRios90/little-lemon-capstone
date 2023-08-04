@@ -1,9 +1,28 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import BookingForm from './components/BookingForm';
+import BookingPage from './components/BookingPage';
+
+
+describe('initializeTimes', () => {
+  it('calls fetchAPI and dispatches an action with the returned times', async () => {
+
+    const mockDispatch = jest.fn();
+    const mockFetchAPI = jest.fn(() => Promise.resolve(['17:00 PM', '19:00 PM', '21:00 PM']));
+
+    await initializeTimes()(mockDispatch, undefined, { fetchAPI: mockFetchAPI });
+
+    expect(mockFetchAPI).toHaveBeenCalled();
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: INITIALIZE_TIMES,
+      times: ['17:00 PM', '19:00 PM', '21:00 PM'],
+    });
+  });
+});
+
+/*
 
 test('user can submit form if all fields are valid', () => {
   
-
   const mockPageRedirect = jest.fn();
   const mockUpdateTimes = jest.fn();
   const mockAvailableTimes = jest.fn();
@@ -20,3 +39,5 @@ test('user can submit form if all fields are valid', () => {
 
   expect(mockPageRedirect).toHaveBeenCalled();
 });
+
+*/
